@@ -9,10 +9,13 @@ const MemberShip=async()=>{
     const user=await currentUser()
       const ProfileInfo= await fetchProfileAction(user?.id);
       const AllPlan = await fetchPlanAction();
-   
+      
+      
       if(user && !ProfileInfo?._id) redirect("/onboard")
+
     return(
         <div>
+          
           <MemberShipPage ProfileInfo={JSON.parse(JSON.stringify(ProfileInfo))} AllPlan={JSON.parse(JSON.stringify(AllPlan))}/>
         </div>
     )

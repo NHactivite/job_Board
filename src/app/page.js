@@ -1,5 +1,4 @@
 import { fetchProfileAction } from '@/actions';
-import { checkRole } from '@/auth/checkRole';
 import HomePage from '@/components/Home-page';
 
 import { currentUser } from '@clerk/nextjs/server';

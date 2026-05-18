@@ -53,7 +53,7 @@ function Header({ user, role, isAdmin }) {
 
   
   return (
-    <header className="flex h-16 w-full shrink-0 items-center sticky top-0 bg-slate-800 z-50  p-4  mb-3">
+    <header className="flex h-16 w-full shrink-0 items-center sticky top-0 bg-slate-800 z-50  p-4  ">
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
           <Button

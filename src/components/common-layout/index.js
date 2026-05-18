@@ -17,7 +17,7 @@ export async function CommonLayout({children}){
             <Header role={profileInfo?.role} user={JSON.parse(JSON.stringify(user))} isAdmin={isAdmin}/>
          
             {/* main content section */}
-               <main className="lg:px-8 min-h-screen">
+               <main className=" min-h-screen">
                   {children}
                </main>
 

@@ -11,7 +11,7 @@
   "dependencies": {
     "@cashfreepayments/cashfree-js": "^1.0.5",
     "@clerk/nextjs": "^6.9.6",
-    "@google/generative-ai": "^0.24.0",
+    "@google/genai": "^2.3.0",
     "@heroicons/react": "^2.2.0",
     "@radix-ui/react-dialog": "^1.1.4",
     "@radix-ui/react-dropdown-menu": "^2.1.12",
@@ -31,6 +31,7 @@
     "mongoose": "^8.9.2",
     "next": "15.1.2",
     "next-pwa": "^5.6.0",
+    "openai": "^6.38.0",
     "query-string": "^9.1.1",
     "react": "^19.0.0",
     "react-datepicker": "^8.2.1",

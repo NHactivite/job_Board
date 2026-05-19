@@ -13,7 +13,7 @@ function CandidateActivity({jobList,jobApplicants}){
               <Tabs defaultValue="Applied" className="w-full">
                  <div className="flex items-baseline justify-between border-b pb-6 pt-4">
                      <h1 className="text-4xl font-bold tracking-tight text-gray-950">
-                        Your Activity
+                        Your Activity 
                      </h1>
                      <TabsList>
                         {

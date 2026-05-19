@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "app.vercel.job_board_nik.twa",
+        "sha256_cert_fingerprints": ["79:82:66:D5:15:CE:C7:93:54:29:16:5F:76:53:6B:CC:C7:4C:DC:5D:01:97:25:78:77:D9:43:7E:4A:47:3F:55"]
+      }
+    }]

@@ -1,4 +1,3 @@
-
 import { CommonLayout } from "@/components/common-layout";
 import { SocketProvider } from "@/context/SocketContext";
 import { ClerkLoaded, ClerkLoading, ClerkProvider } from "@clerk/nextjs";
@@ -20,18 +19,17 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Job Portal",
   description: "A smart job board with video calling & Gemini AI integration",
-  generator: "Next.js",
-  manifest: "/manifest.json", // ✅ This is enough
-  themeColor: "#000000", // ✅ This adds <meta name="theme-color">
-  icons: {
-    apple: "/icons/icon-192x192.png", // ✅ Apple touch icon
-  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
       <html lang="en">
+        <head>
+          <link rel="manifest" href="/manifest.json" />
+          <meta name="theme-color" content="#000000" />
+          <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+        </head>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >

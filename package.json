@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@cashfreepayments/cashfree-js": "^1.0.5",
+    "@cashfreepayments/cashfree-js": "^1.0.7",
     "@clerk/nextjs": "^6.9.6",
     "@google/genai": "^2.3.0",
     "@heroicons/react": "^2.2.0",

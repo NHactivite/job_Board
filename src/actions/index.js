@@ -11,6 +11,7 @@ import { Cashfree } from "cashfree-pg";
 import Plan from "@/models/plans";
 
 import { GoogleGenAI } from "@google/genai";
+import { redirect } from "next/navigation";
 
 // ==================open ai------------------------
 
@@ -81,12 +82,19 @@ export const createProfileAction = async (formData, pathToRevalidate) => {
 
   await Profile.create(formData);
   revalidatePath(pathToRevalidate);
+  redirect(pathToRevalidate); 
 };
 
+// export const fetchProfileAction = async (id) => {
+//   await ConnectDB();
+//   const result = Profile.findOne({ userId: id }).lean();
+//   return result;
+// };
 export const fetchProfileAction = async (id) => {
   await ConnectDB();
-  const result = Profile.findOne({ userId: id }).lean();
-  return result;
+  const result = await Profile.findOne({ userId: id }).lean(); // ← await missing
+  if (!result) return null;
+  return JSON.parse(JSON.stringify(result)); // ← serialize ObjectId to string
 };
 export const fetchAllProfileAction = async () => {
   await ConnectDB();
@@ -125,12 +133,14 @@ export const fetchPlanUpadateAction = async (data, pathToRevalidate) => {
     { new: true },
   ).lean();
   revalidatePath(pathToRevalidate);
+   redirect(pathToRevalidate)
 };
 
 export const createPlanAction = async (data, pathToRevalidate) => {
   await ConnectDB();
   await Plan.create(data);
   revalidatePath(pathToRevalidate);
+   redirect(pathToRevalidate)
 };
 
 // create job action
@@ -139,6 +149,7 @@ export async function postNewJobAction({ formData, pathToRevalidate }) {
   await ConnectDB();
   await Job.create(formData);
   revalidatePath(pathToRevalidate);
+   redirect(pathToRevalidate)
 }
 
 // fetch job action
@@ -173,6 +184,7 @@ export async function createJobApplicationAction(data, pathToRevalidate) {
   await ConnectDB();
   await Application.create(data);
   revalidatePath(pathToRevalidate);
+  redirect(pathToRevalidate)
 }
 export async function fetchJobApplicationAction() {
   await ConnectDB();
@@ -239,6 +251,7 @@ export async function updateJobApplication(data, pathToRevalidate) {
     },
   );
   revalidatePath(pathToRevalidate);
+   redirect(pathToRevalidate)
 }
 
 // filer actions
@@ -279,6 +292,7 @@ export async function updateProfileAction(data, pathToRevalidate) {
     { new: true },
   );
   revalidatePath(pathToRevalidate);
+   redirect(pathToRevalidate)
 }
 
 export async function createPaymentAction(data) {
@@ -336,6 +350,9 @@ export async function createOrderAction(data, pathToRevalidate) {
       memberShipEndDate,
     } = data;
 
+    console.log("call recive",data);
+    
+
     await Profile.findOneAndUpdate(
       {
         _id: _id,
@@ -354,6 +371,7 @@ export async function createOrderAction(data, pathToRevalidate) {
       { new: true },
     );
     revalidatePath(pathToRevalidate);
+     redirect(pathToRevalidate)
   } catch (error) {
     throw error;
   }

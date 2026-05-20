@@ -13,7 +13,6 @@ const value=await searchParams
     //  if(user && !profileInfo?._id) redirect("/onboard")
       if (user && !profileInfo?._id) {
         redirect("/onboard");
-        return null;
     }
     
     

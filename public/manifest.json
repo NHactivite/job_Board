@@ -2,7 +2,12 @@
     "name": "job-board app",
     "short_name": "job-board",
     "start_url": "/",
+    "display_override": [
+    "window-controls-overlay",
+    "standalone"
+  ],
     "display": "standalone",
+
     "theme_color": "#000000",
     "background_color": "#ffffff",
     "description": "A full-stack job portal with video call & Gemini integration.",
@@ -17,5 +22,19 @@
             "sizes": "512x512",
             "type": "image/png"
         }
-    ]
+    ],
+    "screenshots": [
+    {
+      "src": "/screenshots/mobileView.png",
+      "sizes": "819 x 362",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/screenshots/desktopView.png",
+      "sizes": "898 x 1897",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ]
 }

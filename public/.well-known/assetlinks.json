@@ -3,6 +3,7 @@
       "target": {
         "namespace": "android_app",
         "package_name": "app.vercel.job_board_nik.twa",
-        "sha256_cert_fingerprints": ["85:85:83:05:D2:10:64:8D:66:C5:40:85:5A:C7:A3:E6:17:62:FE:67:A5:45:C2:DE:C8:54:C6:2D:4C:4F:8D:23"]
+        "sha256_cert_fingerprints": ["59:14:CC:63:14:BB:0C:FF:4E:21:64:19:BE:3E:D2:6C:2F:95:2C:D0:66:EC:D8:BF:DA:6B:E4:F5:08:82:78:FF"]
       }
     }]
+
